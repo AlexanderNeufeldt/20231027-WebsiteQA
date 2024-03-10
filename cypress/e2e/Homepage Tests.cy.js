@@ -49,12 +49,11 @@ describe('TESTS', ()=> {
 
 
 
-  it("VISIT FAQS BTN", () => {   //click FAQs btn//
+  it.only("VISIT FAQS BTN", () => {   //click FAQs btn//
     cy.visit('https://www.drawntogetherapp.com/')
 
-    cy.wait(1000)
-
-    cy.get('*[class^="header-nav"]').eq(5)  //find FAQs btn, should be similar to featured artists
+    cy.get('.header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > :nth-child(2) > a')
+     //find FAQs btn, should be similar to featured artists
       .click()  
     cy.url().should('eq', 'https://www.drawntogetherapp.com/faqs')  // check btn takes to right page
     cy.get('h1').should('contain', 'Frequently Asked Questions')  // checks text is correct
@@ -85,9 +84,7 @@ describe('TESTS', ()=> {
   it("VISIT CONTACT US", () => {   //click FAQs btn//
     cy.visit('https://www.drawntogetherapp.com/')
 
-    cy.wait(1000)
-
-    cy.get('*[class^="header-nav"]').eq(6)  //find ContactUs btn, should be similar to featured artists
+    cy.get('.header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > :nth-child(3) > a')  //find ContactUs btn, should be similar to featured artists
       .click()  
     cy.url().should('eq', 'https://www.drawntogetherapp.com/contact-us')  // check btn takes to right page
     cy.get('h2').should('contain', 'Contact us.')  // checks text is correct
