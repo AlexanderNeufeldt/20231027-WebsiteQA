@@ -49,7 +49,7 @@ describe('TESTS', ()=> {
 
 
 
-  it.only("VISIT FAQS BTN", () => {   //click FAQs btn//
+  it("VISIT FAQS BTN", () => {   //click FAQs btn//
     cy.visit('https://www.drawntogetherapp.com/')
 
     cy.get('.header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > :nth-child(2) > a')
@@ -101,7 +101,7 @@ describe('TESTS', ()=> {
   it("CLICK PopSandboxProductions BTN", () => {   //click PopSandboxProductions btn
     cy.visit('https://www.drawntogetherapp.com/')
 
-    cy.get('*[class^="fluidImageOverlay"]').eq(2)  //find PopSandboxProductions btn
+    cy.get('*[class^="fluidImageOverlay"]').eq(3)  //find PopSandboxProductions btn
       .click()  
       cy.origin("https://www.popsandbox.com/", () => {  //need to use origin to access different websites
         cy.url().should('eq', 'https://www.popsandbox.com/')  // check btn takes to right page
