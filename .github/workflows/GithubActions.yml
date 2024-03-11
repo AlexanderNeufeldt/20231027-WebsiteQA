@@ -2,6 +2,9 @@ name: Cypress Tests
 
 on: push
 
+  schedule: ## Schedule the job to run at 12.am daily.
+  - cron: '1 1 * * 3' #Sunday can be passed as 0,7 or Sun
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
