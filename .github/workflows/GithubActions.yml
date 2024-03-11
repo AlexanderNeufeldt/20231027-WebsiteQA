@@ -3,11 +3,11 @@ name: Cypress Tests
 on: push
 
   schedule: ## Schedule the job to run at 12.am daily.
-  - cron: '1 1 * * 3' #Sunday can be passed as 0,7 or Sun
+  - cron: '1 1 * * 3' #Sunday can be passed as 0,7 or Sun  hopefully this tests runs tuesday at 1:01am
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-22.04
+    runs-on: chrome-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
