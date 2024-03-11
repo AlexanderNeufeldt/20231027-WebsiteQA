@@ -1,19 +1,26 @@
-name: Cypress Tests
+# This workflow will build a Java project with Maven and cache/restore any dependencies to improve the workflow execution time
+name: GitHub Actions Demo Test Execution
 
-on: push
-
-  schedule: ## Schedule the job to run at 12.am daily.
-  - cron: '1 1 * * 3' #Sunday can be passed as 0,7 or Sun  hopefully this tests runs tuesday at 1:01am
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '*/15 * * * *'
 
 jobs:
-  cypress-run:
-    runs-on: chrome-latest
+  build:
+
+    runs-on: ubuntu-latest
+
     steps:
-      #- name: Checkout
-      #  uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
         with:
-          build: npm run build
-          start: npm start
+          java-version: '11'
+          distribution: 'adopt'
+          cache: maven
+      - name: Build with Maven
+        run: mvn clean install
