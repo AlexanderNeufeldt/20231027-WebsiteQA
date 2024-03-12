@@ -2,6 +2,9 @@ name: Cypress Tests
 
 on: push
 
+on: schedule
+- cron: '1 1 * * 3'
+
 jobs:
   cypress-run:
     runs-on: chrome
