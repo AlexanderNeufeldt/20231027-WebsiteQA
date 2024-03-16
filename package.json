@@ -172,6 +172,14 @@
   },
   "scripts": {
     "cypress:open": "cypress open"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+
+
   },
   "keywords": [
     "e2e",
