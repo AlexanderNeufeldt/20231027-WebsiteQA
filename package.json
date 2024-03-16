@@ -177,7 +177,6 @@
     "lint": "next lint",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
-    "cypress:open": "cypress open"
 
   },
   "keywords": [
