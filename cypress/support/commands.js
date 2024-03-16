@@ -27,10 +27,18 @@ Cypress.Commands.add('EmailTest1' , () => {
 
 cy.get('form-submission-text').should('not.exist') //tries to find sign up message, SHOULD NOT have thank you message
 
-
-  
-
 })
+
+
+
+
+
+
+
+
+
+
+
 
 
 
