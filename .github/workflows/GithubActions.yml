@@ -14,6 +14,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
+          working-directory: 20231027-websiteqa
           build: npm run build
           start: npm start
   #        record: true
