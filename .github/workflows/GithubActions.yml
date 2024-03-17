@@ -1,7 +1,6 @@
 name: End-to-end tests
 on: push
-on:
-  schedule:
+on: schedule
     # runs tests every day at 6pm
     - cron: '0 18 * * *'
 
