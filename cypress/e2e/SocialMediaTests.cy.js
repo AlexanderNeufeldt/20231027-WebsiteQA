@@ -1,6 +1,13 @@
-/*
+
 describe('SOCIAL MEDIA TESTS' , () => {
 
+    it('VISIT HOMEPAGE', () => {
+        cy.visit('https://www.drawntogetherapp.com/')
+        cy.url().should('eq', 'https://www.drawntogetherapp.com/')
+    
+      })
+
+/*
     it("CLICK INSTAGRAM BTN", () => {   //click instagram store btn
         cy.visit('https://www.drawntogetherapp.com/')
     
@@ -73,4 +80,4 @@ describe('SOCIAL MEDIA TESTS' , () => {
 
 
 
-}) */
+}) 

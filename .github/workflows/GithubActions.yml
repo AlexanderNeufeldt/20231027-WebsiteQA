@@ -3,7 +3,7 @@ on:
   push:
 
   schedule:
-    - cron: '0 18 * * *'
+    - cron: '0 18 * * *'  #triggers every day at 6pm
 
 jobs:
   cypress-run:
