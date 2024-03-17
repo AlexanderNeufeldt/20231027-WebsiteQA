@@ -1,5 +1,10 @@
 name: End-to-end tests
 on: push
+on:
+  schedule:
+    # runs tests every day at 6pm
+    - cron: '0 18 * * *'
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
@@ -10,15 +15,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
 
-on:
-  schedule:
-    # runs tests every day at 6pm
-    - cron: '0 18 * * *'
-jobs:
-  nightly:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Cypress nightly tests 🌃
-        uses: cypress-io/github-action@v6
+        
