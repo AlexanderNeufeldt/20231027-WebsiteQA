@@ -1,7 +1,9 @@
 name: End-to-end tests
-on: push
-on: schedule       # runs tests every day at 6pm
-    - cron: '0 18 * * *'
+on:
+  push:
+
+  schedule:
+      - cron: '* 18 * * * *'
 
 jobs:
   cypress-run:
