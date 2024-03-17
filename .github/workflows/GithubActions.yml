@@ -3,7 +3,7 @@ on:
   push:
 
   schedule:
-      - cron: '* 18 * * * *'
+    - cron: '0 18 * * *'
 
 jobs:
   cypress-run:
