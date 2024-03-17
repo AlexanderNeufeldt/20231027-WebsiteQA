@@ -10,11 +10,9 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
 
-
-name: example-cron
 on:
   schedule:
-    # runs tests every day at 4am
+    # runs tests every day at 6pm
     - cron: '0 18 * * *'
 jobs:
   nightly:
