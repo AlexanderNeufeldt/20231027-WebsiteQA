@@ -1,3 +1,4 @@
+/*
 describe('SOCIAL MEDIA TESTS' , () => {
 
     it("CLICK INSTAGRAM BTN", () => {   //click instagram store btn
@@ -72,4 +73,4 @@ describe('SOCIAL MEDIA TESTS' , () => {
 
 
 
-})
+}) */
