@@ -3,7 +3,7 @@ on:
   push:
 
   schedule:
-    - cron: '0 18 * * *'  #triggers every day at 6pm
+    - cron: '0 15 * * *'  # trigger every day at T. uses UTC time (-4 from Toronto)
 
 jobs:
   cypress-run:
